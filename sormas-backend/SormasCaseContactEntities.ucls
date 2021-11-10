@@ -8,7 +8,7 @@
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
-    </display>  
+    </display>     
   </class>  
   <class id="2" language="java" name="de.symeda.sormas.backend.caze.porthealthinfo.PortHealthInfo" 
     project="sormas-backend" 

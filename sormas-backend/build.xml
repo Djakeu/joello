@@ -3,50 +3,32 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="sormas-ui">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="sormas-backend">
     <property environment="env"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
     <path id="Maven Dependencies.libraryclasspath">
-        <pathelement location="../../../.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar"/>
-        <pathelement location="../../../.m2/repository/javax/javaee-web-api/8.0.1/javaee-web-api-8.0.1.jar"/>
-        <pathelement location="../../../../../sormas-api"/>
-        <pathelement location="../../../.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.67/bcpkix-jdk15on-1.67.jar"/>
-        <pathelement location="../../../../../sormas-widgetset"/>
-        <pathelement location="../../../.m2/repository/com/opencsv/opencsv/5.3/opencsv-5.3.jar"/>
+        <pathelement location="../../../.m2/repository/javax/javaee-api/8.0.1/javaee-api-8.0.1.jar"/>
+        <pathelement location="../../../.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar"/>
+        <pathelement location="../../../.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
+        <pathelement location="../../../.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar"/>
+        <pathelement location="../../../.m2/repository/com/opencsv/opencsv/5.3/opencsv-5.3.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar"/>
         <pathelement location="../../../.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar"/>
+        <pathelement location="../../../.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar"/>
+        <pathelement location="../../../.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar"/>
         <pathelement location="../../../.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
         <pathelement location="../../../.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar"/>
-        <pathelement location="../../../.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-compatibility-server/8.14.1/vaadin-compatibility-server-8.14.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-server/8.14.1/vaadin-server-8.14.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-sass-compiler/0.9.13/vaadin-sass-compiler-0.9.13.jar"/>
-        <pathelement location="../../../.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/external/flute/flute/1.3.0.gg2/flute-1.3.0.gg2.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-shared/8.14.1/vaadin-shared-8.14.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/jsoup/jsoup/1.14.2/jsoup-1.14.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/external/gentyref/1.2.0.vaadin1/gentyref-1.2.0.vaadin1.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-compatibility-shared/8.14.1/vaadin-compatibility-shared-8.14.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/vaadin/vaadin-themes/8.14.1/vaadin-themes-8.14.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/vaadin/addons/popupbutton/3.0.0/popupbutton-3.0.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/vaadin/addons/extended-token-field/0.3.0/extended-token-field-0.3.0.jar"/>
-        <pathelement location="../../../.m2/repository/com/wcs/wcslib/wcslib-vaadin-widget-multifileupload/4.0/wcslib-vaadin-widget-multifileupload-4.0.jar"/>
-        <pathelement location="../../../.m2/repository/joda-time/joda-time/2.10.8/joda-time-2.10.8.jar"/>
+        <pathelement location="../../../../../sormas-api"/>
         <pathelement location="../../../.m2/repository/org/springframework/spring-context/4.3.30.RELEASE/spring-context-4.3.30.RELEASE.jar"/>
         <pathelement location="../../../.m2/repository/org/springframework/spring-aop/4.3.30.RELEASE/spring-aop-4.3.30.RELEASE.jar"/>
         <pathelement location="../../../.m2/repository/org/springframework/spring-beans/4.3.30.RELEASE/spring-beans-4.3.30.RELEASE.jar"/>
         <pathelement location="../../../.m2/repository/org/springframework/spring-core/4.3.30.RELEASE/spring-core-4.3.30.RELEASE.jar"/>
         <pathelement location="../../../.m2/repository/org/springframework/spring-expression/4.3.30.RELEASE/spring-expression-4.3.30.RELEASE.jar"/>
-        <pathelement location="../../../.m2/repository/javax/javaee-api/8.0.1/javaee-api-8.0.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar"/>
-        <pathelement location="../../../.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar"/>
-        <pathelement location="../../../../../sormas-backend"/>
-        <pathelement location="../../../.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar"/>
-        <pathelement location="../../../.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar"/>
+        <pathelement location="../../../.m2/repository/joda-time/joda-time/2.10.8/joda-time-2.10.8.jar"/>
         <pathelement location="../../../.m2/repository/org/geotools/gt-shapefile/24.1/gt-shapefile-24.1.jar"/>
         <pathelement location="../../../.m2/repository/org/geotools/gt-main/24.1/gt-main-24.1.jar"/>
         <pathelement location="../../../.m2/repository/org/geotools/gt-referencing/24.1/gt-referencing-24.1.jar"/>
@@ -70,10 +52,13 @@
         <pathelement location="../../../.m2/repository/it/geosolutions/jgridshift/jgridshift-core/1.3/jgridshift-core-1.3.jar"/>
         <pathelement location="../../../.m2/repository/net/sf/geographiclib/GeographicLib-Java/1.49/GeographicLib-Java-1.49.jar"/>
         <pathelement location="../../../.m2/repository/org/locationtech/jts/jts-core/1.17.1/jts-core-1.17.1.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.2/jackson-core-2.10.2.jar"/>
         <pathelement location="../../../.m2/repository/javax/media/jai_core/1.1.3/jai_core-1.1.3.jar"/>
         <pathelement location="../../../.m2/repository/com/nexmo/client/5.6.0/client-5.6.0.jar"/>
+        <pathelement location="../../../.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar"/>
         <pathelement location="../../../.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.2/jackson-databind-2.10.2.jar"/>
         <pathelement location="../../../.m2/repository/io/openapitools/jackson/dataformat/jackson-dataformat-hal/1.0.4/jackson-dataformat-hal-1.0.4.jar"/>
         <pathelement location="../../../.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.10.2/jackson-jaxrs-json-provider-2.10.2.jar"/>
         <pathelement location="../../../.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.10.2/jackson-jaxrs-base-2.10.2.jar"/>
@@ -87,6 +72,8 @@
         <pathelement location="../../../.m2/repository/io/jsonwebtoken/jjwt-api/0.10.5/jjwt-api-0.10.5.jar"/>
         <pathelement location="../../../.m2/repository/io/jsonwebtoken/jjwt-impl/0.10.5/jjwt-impl-0.10.5.jar"/>
         <pathelement location="../../../.m2/repository/io/jsonwebtoken/jjwt-jackson/0.10.5/jjwt-jackson-0.10.5.jar"/>
+        <pathelement location="../../../.m2/repository/org/jsoup/jsoup/1.14.2/jsoup-1.14.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/poi/poi-ooxml/3.17/poi-ooxml-3.17.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/poi/poi/3.17/poi-3.17.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/poi/poi-ooxml-schemas/3.17/poi-ooxml-schemas-3.17.jar"/>
@@ -116,6 +103,7 @@
         <pathelement location="../../../.m2/repository/net/arnx/wmf2svg/0.9.8/wmf2svg-0.9.8.jar"/>
         <pathelement location="../../../.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar"/>
         <pathelement location="../../../.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/pdfbox/fontbox/2.0.19/fontbox-2.0.19.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/xmlgraphics/fop-events/2.5/fop-events-2.5.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/xmlgraphics/fop-util/2.5/fop-util-2.5.jar"/>
@@ -124,9 +112,60 @@
         <pathelement location="../../../.m2/repository/org/apache/ant/ant-launcher/1.8.2/ant-launcher-1.8.2.jar"/>
         <pathelement location="../../../.m2/repository/com/thedeanda/lorem/2.1/lorem-2.1.jar"/>
         <pathelement location="../../../.m2/repository/org/docx4j/docx4j-JAXB-ReferenceImpl/8.3.1/docx4j-JAXB-ReferenceImpl-8.3.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar"/>
+        <pathelement location="../../../.m2/repository/com/sun/istack/istack-commons-runtime/3.0.10/istack-commons-runtime-3.0.10.jar"/>
+        <pathelement location="../../../.m2/repository/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar"/>
         <pathelement location="../../../.m2/repository/org/freemarker/freemarker/2.3.30/freemarker-2.3.30.jar"/>
+        <pathelement location="../../../.m2/repository/org/hibernate/hibernate-core/5.4.25.Final/hibernate-core-5.4.25.Final.jar"/>
+        <pathelement location="../../../.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar"/>
+        <pathelement location="../../../.m2/repository/net/bytebuddy/byte-buddy/1.10.17/byte-buddy-1.10.17.jar"/>
+        <pathelement location="../../../.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+        <pathelement location="../../../.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar"/>
+        <pathelement location="../../../.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar"/>
+        <pathelement location="../../../.m2/repository/org/hibernate/validator/hibernate-validator/6.1.6.Final/hibernate-validator-6.1.6.Final.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar"/>
+        <pathelement location="../../../.m2/repository/com/vladmihalcea/hibernate-types-52/2.10.0/hibernate-types-52-2.10.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar"/>
+        <pathelement location="../../../.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar"/>
+        <pathelement location="../../../.m2/repository/info/novatec/bean-test/0.2.Final/bean-test-0.2.Final.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-ejb_3.1_spec/1.0/geronimo-ejb_3.1_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-jpa_2.0_spec/1.0/geronimo-jpa_2.0_spec-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/jboss/weld/se/weld-se/2.1.2.Final/weld-se-2.1.2.Final.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/deltaspike/core/deltaspike-core-impl/1.2.1/deltaspike-core-impl-1.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/deltaspike/core/deltaspike-core-api/1.2.1/deltaspike-core-api-1.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/deltaspike/cdictrl/deltaspike-cdictrl-weld/1.2.1/deltaspike-cdictrl-weld-1.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/deltaspike/cdictrl/deltaspike-cdictrl-api/1.2.1/deltaspike-cdictrl-api-1.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jersey/core/jersey-client/2.30/jersey-client-2.30.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jersey/core/jersey-common/2.30/jersey-common-2.30.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/external/jakarta.inject/2.6.1/jakarta.inject-2.6.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.30/jersey-media-json-jackson-2.30.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.30/jersey-entity-filtering-2.30.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.2/jackson-annotations-2.10.2.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.2/jackson-module-jaxb-annotations-2.10.2.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/jersey/inject/jersey-hk2/2.30/jersey-hk2-2.30.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/hk2-locator/2.6.1/hk2-locator-2.6.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.6.1/aopalliance-repackaged-2.6.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/hk2-api/2.6.1/hk2-api-2.6.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/javassist/javassist/3.26.0-GA/javassist-3.26.0-GA.jar"/>
+        <pathelement location="../../../.m2/repository/p6spy/p6spy/3.9.1/p6spy-3.9.1.jar"/>
+        <pathelement location="../../../.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar"/>
+        <pathelement location="../../../.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.67/bcpkix-jdk15on-1.67.jar"/>
+        <pathelement location="../../../.m2/repository/org/bouncycastle/bcprov-jdk15on/1.67/bcprov-jdk15on-1.67.jar"/>
+        <pathelement location="../../../.m2/repository/org/apache/geronimo/config/geronimo-config-impl/1.2.2/geronimo-config-impl-1.2.2.jar"/>
         <pathelement location="../../../.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.12.14/libphonenumber-8.12.14.jar"/>
         <pathelement location="../../../.m2/repository/org/keycloak/keycloak-admin-client/12.0.4/keycloak-admin-client-12.0.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/keycloak/keycloak-core/12.0.4/keycloak-core-12.0.4.jar"/>
+        <pathelement location="../../../.m2/repository/org/keycloak/keycloak-common/12.0.4/keycloak-common-12.0.4.jar"/>
         <pathelement location="../../../.m2/repository/org/jboss/resteasy/resteasy-client/3.15.1.Final/resteasy-client-3.15.1.Final.jar"/>
         <pathelement location="../../../.m2/repository/org/jboss/resteasy/resteasy-jaxrs/3.15.1.Final/resteasy-jaxrs-3.15.1.Final.jar"/>
         <pathelement location="../../../.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar"/>
@@ -139,7 +178,19 @@
         <pathelement location="../../../.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar"/>
         <pathelement location="../../../.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar"/>
         <pathelement location="../../../.m2/repository/org/jboss/resteasy/resteasy-jaxb-provider/3.15.1.Final/resteasy-jaxb-provider-3.15.1.Final.jar"/>
+        <pathelement location="../../../.m2/repository/fish/payara/api/payara-api/5.2020.2/payara-api-5.2020.2.jar"/>
+        <pathelement location="../../../.m2/repository/fish/payara/security/connectors/security-connector-oidc-client/1.1.0/security-connector-oidc-client-1.1.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/glassfish/soteria/javax.security.enterprise/1.0/javax.security.enterprise-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/javax/security/enterprise/javax.security.enterprise-api/1.0/javax.security.enterprise-api-1.0.jar"/>
+        <pathelement location="../../../.m2/repository/com/nimbusds/nimbus-jose-jwt/8.19/nimbus-jose-jwt-8.19.jar"/>
+        <pathelement location="../../../.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar"/>
+        <pathelement location="../../../.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar"/>
+        <pathelement location="../../../.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar"/>
+        <pathelement location="../../../.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar"/>
+        <pathelement location="../../../.m2/repository/jakarta/platform/jakarta.jakartaee-api/8.0.0/jakarta.jakartaee-api-8.0.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/1.4/microprofile-config-api-1.4.jar"/>
         <pathelement location="../../../.m2/repository/com/jayway/jsonpath/json-path/2.6.0/json-path-2.6.0.jar"/>
+        <pathelement location="../../../.m2/repository/com/github/tomakehurst/wiremock-standalone/2.27.2/wiremock-standalone-2.27.2.jar"/>
         <pathelement location="../../../.m2/repository/com/ibm/etcd/etcd-java/0.0.18/etcd-java-0.0.18.jar"/>
         <pathelement location="../../../.m2/repository/io/netty/netty-transport-native-epoll/4.1.51.Final/netty-transport-native-epoll-4.1.51.Final-linux-x86_64.jar"/>
         <pathelement location="../../../.m2/repository/io/netty/netty-common/4.1.51.Final/netty-common-4.1.51.Final.jar"/>
@@ -166,6 +217,9 @@
         <pathelement location="../../../.m2/repository/io/grpc/grpc-protobuf-lite/1.33.1/grpc-protobuf-lite-1.33.1.jar"/>
         <pathelement location="../../../.m2/repository/io/grpc/grpc-stub/1.33.1/grpc-stub-1.33.1.jar"/>
         <pathelement location="../../../.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar"/>
+        <pathelement location="../../../.m2/repository/com/google/guava/guava/30.0-jre/guava-30.0-jre.jar"/>
+        <pathelement location="../../../.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
+        <pathelement location="../../../.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
         <pathelement location="../../../.m2/repository/com/google/oauth-client/google-oauth-client/1.31.5/google-oauth-client-1.31.5.jar"/>
         <pathelement location="../../../.m2/repository/com/google/http-client/google-http-client/1.39.2/google-http-client-1.39.2.jar"/>
         <pathelement location="../../../.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar"/>
@@ -175,63 +229,6 @@
         <pathelement location="../../../.m2/repository/io/grpc/grpc-context/1.27.2/grpc-context-1.27.2.jar"/>
         <pathelement location="../../../.m2/repository/io/opencensus/opencensus-contrib-http-util/0.28.0/opencensus-contrib-http-util-0.28.0.jar"/>
         <pathelement location="../../../.m2/repository/com/google/http-client/google-http-client-gson/1.39.2/google-http-client-gson-1.39.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/github/mpkorstanje/simmetrics-core/4.1.1/simmetrics-core-4.1.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/google/guava/guava/30.0-jre/guava-30.0-jre.jar"/>
-        <pathelement location="../../../.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
-        <pathelement location="../../../.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar"/>
-        <pathelement location="../../../.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar"/>
-        <pathelement location="../../../.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar"/>
-        <pathelement location="../../../.m2/repository/org/hibernate/hibernate-core/5.4.25.Final/hibernate-core-5.4.25.Final.jar"/>
-        <pathelement location="../../../.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar"/>
-        <pathelement location="../../../.m2/repository/net/bytebuddy/byte-buddy/1.10.17/byte-buddy-1.10.17.jar"/>
-        <pathelement location="../../../.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
-        <pathelement location="../../../.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar"/>
-        <pathelement location="../../../.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar"/>
-        <pathelement location="../../../.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar"/>
-        <pathelement location="../../../.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar"/>
-        <pathelement location="../../../.m2/repository/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/hibernate/validator/hibernate-validator/6.1.6.Final/hibernate-validator-6.1.6.Final.jar"/>
-        <pathelement location="../../../.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/vladmihalcea/hibernate-types-52/2.10.0/hibernate-types-52-2.10.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/corba/glassfish-corba-omgapi/4.2.2/glassfish-corba-omgapi-4.2.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar"/>
-        <pathelement location="../../../.m2/repository/info/novatec/bean-test/0.2.Final/bean-test-0.2.Final.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-ejb_3.1_spec/1.0/geronimo-ejb_3.1_spec-1.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/geronimo/specs/geronimo-jpa_2.0_spec/1.0/geronimo-jpa_2.0_spec-1.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/jboss/weld/se/weld-se/2.1.2.Final/weld-se-2.1.2.Final.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/deltaspike/core/deltaspike-core-impl/1.2.1/deltaspike-core-impl-1.2.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/deltaspike/core/deltaspike-core-api/1.2.1/deltaspike-core-api-1.2.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/deltaspike/cdictrl/deltaspike-cdictrl-weld/1.2.1/deltaspike-cdictrl-weld-1.2.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/deltaspike/cdictrl/deltaspike-cdictrl-api/1.2.1/deltaspike-cdictrl-api-1.2.1.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/jersey/core/jersey-client/2.30/jersey-client-2.30.jar"/>
-        <pathelement location="../../../.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/jersey/core/jersey-common/2.30/jersey-common-2.30.jar"/>
-        <pathelement location="../../../.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/hk2/external/jakarta.inject/2.6.1/jakarta.inject-2.6.1.jar"/>
-        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.2/jackson-databind-2.10.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.2/jackson-annotations-2.10.2.jar"/>
-        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.2/jackson-core-2.10.2.jar"/>
-        <pathelement location="../../../.m2/repository/org/apache/geronimo/config/geronimo-config-impl/1.2.2/geronimo-config-impl-1.2.2.jar"/>
-        <pathelement location="../../../.m2/repository/org/keycloak/keycloak-core/12.0.4/keycloak-core-12.0.4.jar"/>
-        <pathelement location="../../../.m2/repository/org/keycloak/keycloak-common/12.0.4/keycloak-common-12.0.4.jar"/>
-        <pathelement location="../../../.m2/repository/org/bouncycastle/bcprov-jdk15on/1.67/bcprov-jdk15on-1.67.jar"/>
-        <pathelement location="../../../.m2/repository/fish/payara/api/payara-api/5.2020.2/payara-api-5.2020.2.jar"/>
-        <pathelement location="../../../.m2/repository/fish/payara/security/connectors/security-connector-oidc-client/1.1.0/security-connector-oidc-client-1.1.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/glassfish/soteria/javax.security.enterprise/1.0/javax.security.enterprise-1.0.jar"/>
-        <pathelement location="../../../.m2/repository/javax/security/enterprise/javax.security.enterprise-api/1.0/javax.security.enterprise-api-1.0.jar"/>
-        <pathelement location="../../../.m2/repository/com/nimbusds/nimbus-jose-jwt/8.19/nimbus-jose-jwt-8.19.jar"/>
-        <pathelement location="../../../.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar"/>
-        <pathelement location="../../../.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar"/>
-        <pathelement location="../../../.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar"/>
-        <pathelement location="../../../.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar"/>
-        <pathelement location="../../../.m2/repository/jakarta/platform/jakarta.jakartaee-api/8.0.0/jakarta.jakartaee-api-8.0.0.jar"/>
-        <pathelement location="../../../.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/1.4/microprofile-config-api-1.4.jar"/>
         <pathelement location="../../../.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
         <pathelement location="../../../.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar"/>
         <pathelement location="../../../.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar"/>
@@ -240,23 +237,16 @@
         <pathelement location="../../../.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar"/>
         <pathelement location="../../../.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar"/>
     </path>
-    <path id="sormas-ui.classpath">
+    <path id="sormas-backend.classpath">
         <pathelement location="target/classes"/>
-        <pathelement location="target/test-classes"/>
         <path refid="Maven Dependencies.libraryclasspath"/>
+        <pathelement location="target/test-classes"/>
     </path>
     <target name="init">
         <mkdir dir="target/classes"/>
         <mkdir dir="target/test-classes"/>
         <copy includeemptydirs="false" todir="target/classes">
             <fileset dir="src/main/resources">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-                <exclude name="**"/>
-            </fileset>
-        </copy>
-        <copy includeemptydirs="false" todir="target/test-classes">
-            <fileset dir="src/test/resources">
                 <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
                 <exclude name="**"/>
@@ -288,13 +278,11 @@
             <src path="src/main/resources"/>
             <src path="src/main/java"/>
             <exclude name="**"/>
-            <classpath refid="sormas-ui.classpath"/>
+            <classpath refid="sormas-backend.classpath"/>
         </javac>
         <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src/test/resources"/>
             <src path="src/test/java"/>
-            <exclude name="**"/>
-            <classpath refid="sormas-ui.classpath"/>
+            <classpath refid="sormas-backend.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
